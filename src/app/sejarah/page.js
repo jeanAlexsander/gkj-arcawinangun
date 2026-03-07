@@ -167,13 +167,13 @@ export default function SejarahPage() {
             ].map((img, index) => (
               <div
                 key={index}
-                className="w-full h-72 overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
+                className="relative w-full h-72 overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover w-full h-full"
+                  className="object-cover"
                 />
               </div>
             ))}
