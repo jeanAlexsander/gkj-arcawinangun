@@ -168,14 +168,14 @@ export default function SejarahPage() {
               className="w-full h-auto rounded-xl shadow-md transition duration-300 hover:scale-105"
             />
             <Image
-              src="/foto2.jpg"
+              src="/gereja_2.jpg"
               alt="Pentahbisan"
               width={400}
               height={300}
               className="w-full h-auto rounded-xl shadow-md transition duration-300 hover:scale-105"
             />
             <Image
-              src="/foto3.jpg"
+              src="/gereja_3.jpg"
               alt="Gedung Baru"
               width={400}
               height={300}
