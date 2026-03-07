@@ -160,27 +160,23 @@ export default function SejarahPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <Image
-              src="/gereja.jpg"
-              alt="Gedung Lama"
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-xl shadow-md transition duration-300 hover:scale-105"
-            />
-            <Image
-              src="/gereja_2.jpg"
-              alt="Pentahbisan"
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-xl shadow-md transition duration-300 hover:scale-105"
-            />
-            <Image
-              src="/gereja_3.jpg"
-              alt="Gedung Baru"
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-xl shadow-md transition duration-300 hover:scale-105"
-            />
+            {[
+              { src: "/gereja.jpg", alt: "Gedung Lama" },
+              { src: "/gereja_2.jpg", alt: "Pentahbisan" },
+              { src: "/gereja_3.jpg", alt: "Gedung Baru" },
+            ].map((img, index) => (
+              <div
+                key={index}
+                className="w-full h-72 overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
