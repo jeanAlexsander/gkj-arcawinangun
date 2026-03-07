@@ -62,7 +62,7 @@ export default function Home() {
               Kabupaten Banyumas. Merupakan bagian dari GKJ Klasis Banyumas
               Utara dimana GKJ sendiri merupakan sebuah sinode gereja yang
               berkantor di Salatiga. Sinode GKJ merupakan bagian dari
-              persekutuan-persekutuan di Indonesia (PGI)
+              persekutuan-persekutuan di Indonesia (PGI).
             </p>
 
             <Link
