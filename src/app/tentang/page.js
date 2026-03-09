@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Church, Users, HeartHandshake } from "lucide-react";
+import { Church, Users, HeartHandshake, Flag } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
@@ -12,6 +12,7 @@ const services = [
   { title: "Persekutuan Doa", icon: Church },
   { title: "Pelayanan Sosial", icon: HeartHandshake },
   { title: "Kunjungan", icon: HeartHandshake },
+  { title: "Pelayanan Misi", icon: Flag },
 ];
 
 export default function TentangPage() {

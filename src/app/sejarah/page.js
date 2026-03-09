@@ -142,12 +142,12 @@ export default function SejarahPage() {
           </p>
 
           <p>
-            Setelah berproses dari 2022-2026, hari ini dilaksanakan penahbisan
-            atas Vikaris Amos Renoardi, S.Th. M.Si sebagai pendeta baru GKJ
-            Arcawinangun. Sejarah ini bukan sekadar catatan perjalanan,
-            melainkan kesaksian tentang Tuhan yang setia membentuk gereja
-            melalui iman, kepemimpinan yang melayani, dan kesediaan umat-Nya
-            untuk terus berjalan bersama dalam terang kasih Kristus.
+            Setelah berproses dari 2022-2026, pada tanggal 13 April 2026
+            dilaksanakan penahbisan atas diri Vikaris Amos Renoardi, S.Th. M.Si
+            sebagai pendeta GKJ Arcawinangun. Sejarah ini bukan sekadar catatan
+            perjalanan, melainkan kesaksian tentang Tuhan yang setia membentuk
+            gereja melalui iman, kepemimpinan yang melayani, dan kesediaan
+            umat-Nya untuk terus berjalan bersama dalam terang kasih Kristus.
           </p>
         </motion.div>
       </section>

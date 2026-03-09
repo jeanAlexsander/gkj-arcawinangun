@@ -1,11 +1,34 @@
 "use client";
 
 import { Mic, BookOpen, CalendarDays, Gift, Download } from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const [selectedLentera, setSelectedLentera] = useState(null);
+  useEffect(() => {
+    if (selectedLentera) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedLentera]);
+  const lenteraData = [
+    {
+      title: "Februari 2 2026",
+      file: "/lentera-februari-2-2026.pdf",
+      image: "/lentera-februari.jpg",
+    },
+    {
+      title: "Januari 2026",
+      file: "/lentera-januari-2026.pdf",
+      image: "/lentera-januari.jpg",
+    },
+  ];
   return (
     <main className="bg-white space-y-24">
       {/* HERO */}
@@ -132,18 +155,7 @@ export default function PengumumanPage() {
           </h2>
 
           {/* DATA LENTERA */}
-          {[
-            {
-              title: "Februari 2 2026",
-              file: "/lentera-februari-2-2026.pdf",
-              image: "/lentera-februari.jpg",
-            },
-            {
-              title: "Januari 2026",
-              file: "/lentera-januari-2026.pdf",
-              image: "/lentera-januari.jpg",
-            },
-          ].map((item, index) => (
+          {lenteraData.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
@@ -166,41 +178,64 @@ export default function PengumumanPage() {
         </motion.div>
       </section>
 
-      {/* MODAL LENTERA */}
-      {selectedLentera && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full relative">
-            {/* tombol close */}
-            <button
-              onClick={() => setSelectedLentera(null)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+      {/* MODAL LENTERA DENGAN ANIMASI */}
+      <AnimatePresence>
+        {selectedLentera && (
+          <motion.div
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 left-0 w-screen h-screen bg-black/60 backdrop-blur-sm z-[999] flex items-center justify-center p-4"
+            onClick={() => setSelectedLentera(null)} // klik overlay tutup modal
+          >
+            <motion.div
+              key="modal"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{
+                duration: 0.3,
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+              }}
+              className="bg-white rounded-2xl p-6 max-w-md w-full relative my-auto"
+              onClick={(e) => e.stopPropagation()} // klik modal tidak menutup
             >
-              ✕
-            </button>
+              {/* tombol close */}
+              <button
+                onClick={() => setSelectedLentera(null)}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+              >
+                ✕
+              </button>
 
-            <h3 className="text-xl font-semibold mb-4 text-center">
-              Lentera {selectedLentera.title}
-            </h3>
+              <h3 className="text-xl font-semibold mb-4 text-center">
+                Lentera {selectedLentera.title}
+              </h3>
 
-            {/* preview gambar */}
-            <img
-              src={selectedLentera.image}
-              alt="Preview Lentera"
-              className="rounded-lg mb-4"
-            />
+              {/* preview gambar */}
+              <img
+                src={selectedLentera.image}
+                alt="Preview Lentera"
+                className="rounded-lg mb-4"
+              />
 
-            {/* download */}
-            <a
-              href={selectedLentera.file}
-              download
-              className="flex justify-center items-center gap-2 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              <Download className="w-4 h-4" />
-              Download PDF
-            </a>
-          </div>
-        </div>
-      )}
+              {/* download */}
+              <a
+                href={selectedLentera.file}
+                download
+                className="flex justify-center items-center gap-2 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              >
+                <Download className="w-4 h-4" />
+                Download PDF
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* KEGIATAN */}
       <section className="max-w-5xl mx-auto px-6 mb-32">

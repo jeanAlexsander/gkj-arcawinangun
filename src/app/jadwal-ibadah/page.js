@@ -190,6 +190,11 @@ export default function JadwalIbadahPage() {
                 day: "Jumat",
                 time: "19.00 WIB",
               },
+              {
+                title: "Blok Pepanthan Karangnanas",
+                day: "Minggu",
+                time: "10:00 WIB",
+              },
             ].map((item, index) => (
               <motion.div
                 key={item.title}

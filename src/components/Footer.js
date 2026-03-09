@@ -27,7 +27,7 @@ export default function Footer() {
               <br />
               Purwokerto Timur, Kabupaten Banyumas,
               <br />
-              Jawa Tengah 53115
+              Jawa Tengah 53113
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-sm">
             <span>✉️</span>
-            <p>gereja@email.com</p>
+            <p>arcawinangun.gkj@gmail.com</p>
           </div>
         </div>
 

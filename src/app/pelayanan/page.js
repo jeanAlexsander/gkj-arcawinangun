@@ -10,7 +10,6 @@ const pelayanans = [
     items: [
       "Liturgi",
       "Pemusik & Singer",
-      "Pemandu Lagu",
       "Operator Multimedia",
       "Tata Ibadah",
     ],
