@@ -2,8 +2,10 @@
 
 import { Mic, BookOpen, CalendarDays, Gift, Download } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function PengumumanPage() {
+  const [selectedLentera, setSelectedLentera] = useState(null);
   return (
     <main className="bg-white space-y-24">
       {/* HERO */}
@@ -129,29 +131,76 @@ export default function PengumumanPage() {
             Lentera (Buletin Gereja)
           </h2>
 
-          <div className="space-y-4">
-            {["Februari 2 2026", "Januari 2026"].map((bulan, index) => (
-              <motion.div
-                key={bulan}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: false }}
-                className="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm"
+          {/* DATA LENTERA */}
+          {[
+            {
+              title: "Februari 2 2026",
+              file: "/lentera-februari-2-2026.pdf",
+              image: "/lentera-februari.jpg",
+            },
+            {
+              title: "Januari 2026",
+              file: "/lentera-januari-2026.pdf",
+              image: "/lentera-januari.jpg",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: false }}
+              className="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm mb-4"
+            >
+              <span>Lentera {item.title}</span>
+
+              <button
+                onClick={() => setSelectedLentera(item)}
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition"
               >
-                <span>Lentera {bulan}</span>
-                <a
-                  href={`/lentera-${bulan.toLowerCase().replace(" ", "-")}.pdf`}
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition"
-                >
-                  <Download className="w-4 h-4" />
-                  Download
-                </a>
-              </motion.div>
-            ))}
-          </div>
+                <Download className="w-4 h-4" />
+                Lihat
+              </button>
+            </motion.div>
+          ))}
         </motion.div>
       </section>
+
+      {/* MODAL LENTERA */}
+      {selectedLentera && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full relative">
+            {/* tombol close */}
+            <button
+              onClick={() => setSelectedLentera(null)}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+            >
+              ✕
+            </button>
+
+            <h3 className="text-xl font-semibold mb-4 text-center">
+              Lentera {selectedLentera.title}
+            </h3>
+
+            {/* preview gambar */}
+            <img
+              src={selectedLentera.image}
+              alt="Preview Lentera"
+              className="rounded-lg mb-4"
+            />
+
+            {/* download */}
+            <a
+              href={selectedLentera.file}
+              download
+              className="flex justify-center items-center gap-2 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              <Download className="w-4 h-4" />
+              Download PDF
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* KEGIATAN */}
       <section className="max-w-5xl mx-auto px-6 mb-32">
