@@ -140,6 +140,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HIGHLIGHT MINGGU INI */}
+      <section className="py-16 bg-white">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: false }}
+          className="max-w-5xl mx-auto px-6"
+        >
+          <h2 className="text-3xl font-bold text-gray-800 text-center mb-10">
+            Highlight Minggu Ini
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              "Ibadah Minggu pukul 06.00, 08.30, dan 17.00 WIB.",
+              "Persekutuan Doa hari Rabu pukul 19.00 WIB.",
+              "Retret Pemuda akan dilaksanakan 25 Maret 2026.",
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gray-50 rounded-xl p-6 border border-gray-200"
+              >
+                <p className="text-gray-700">{item}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/pengumuman"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition"
+            >
+              Lihat Pengumuman Lengkap
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-blue-50 text-center">
         <motion.div

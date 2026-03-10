@@ -161,9 +161,9 @@ export default function SejarahPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { src: "/gereja.jpg", alt: "Gedung Lama" },
-              { src: "/gereja_2.jpg", alt: "Pentahbisan" },
-              { src: "/gereja_3.jpg", alt: "Gedung Baru" },
+              { src: "/gereja_7.jpg", alt: "Gedung Lama" },
+              { src: "/gereja.jpg", alt: "Pentahbisan" },
+              { src: "/gereja_5.jpg", alt: "Gedung Baru" },
             ].map((img, index) => (
               <div
                 key={index}

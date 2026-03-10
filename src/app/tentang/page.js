@@ -63,7 +63,7 @@ export default function TentangPage() {
             className="flex justify-center md:justify-start"
           >
             <Image
-              src="/gereja_2.jpg"
+              src="/gereja_6.jpg"
               alt="Sejarah GKJ Arcawinangun"
               width={600}
               height={500}
