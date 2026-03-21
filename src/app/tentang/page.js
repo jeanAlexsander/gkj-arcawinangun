@@ -19,7 +19,7 @@ export default function TentangPage() {
   return (
     <main className="space-y-24">
       {/* SEKILAS */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-24 bg-blue-50">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function TentangPage() {
       </section>
 
       {/* SEJARAH */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           {/* FOTO KIRI */}
           <motion.div
@@ -123,7 +123,7 @@ export default function TentangPage() {
       </section>
 
       {/* VISI MISI */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export default function TentangPage() {
       </section>
 
       {/* PELAYANAN */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="max-w-5xl mx-auto px-6 py-24">
         <h2 className="text-3xl font-bold mb-10 text-center">
           Pelayanan & Kegiatan
         </h2>
@@ -188,7 +188,7 @@ export default function TentangPage() {
       </section>
 
       {/* STRUKTUR */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
