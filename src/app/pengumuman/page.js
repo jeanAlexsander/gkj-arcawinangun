@@ -59,13 +59,27 @@ export default function PengumumanPage() {
         >
           <h2 className="flex items-center gap-3 text-2xl font-bold text-gray-900 mb-6">
             <Mic className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600 shrink-0" />
-            Highlight – Minggu, 17 Februari 2026
+            Highlight – Minggu Ini
           </h2>
 
           <ul className="list-disc list-outside pl-6 text-lg text-gray-700 leading-relaxed space-y-2">
-            <li>Ibadah Minggu dimulai pukul 06.00, 08.30, dan 17.00 WIB.</li>
-            <li>Persekutuan Doa diadakan hari Rabu pukul 19.00 WIB.</li>
-            <li>Retret Pemuda akan dilaksanakan tanggal 25 Maret 2026.</li>
+            <li>
+              Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.
+            </li>
+            <li>
+              Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.
+            </li>
+            <li>
+              Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.
+            </li>
+            <li>
+              Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026
+              Pukul 05:00 di lapangan kelurahan Arcawinangun.
+            </li>
+            <li>
+              Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026
+              Pukul 08:00.
+            </li>
           </ul>
         </motion.div>
       </section>
@@ -80,7 +94,7 @@ export default function PengumumanPage() {
           className="bg-white border border-blue-100 rounded-2xl p-8 shadow-sm"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Jadwal Pengkhotbah – Februari 2026
+            Jadwal Pengkhotbah – Maret 2026
           </h2>
 
           {/* HEADER JAM (HANYA SEKALI) */}
@@ -99,7 +113,7 @@ export default function PengumumanPage() {
               <div>
                 {[
                   {
-                    tanggal: "2 Februari 2026",
+                    tanggal: "5 Maret 2026",
                     pendeta: [
                       "Pdt. Yohanes Fernando",
                       "Pdt. Maria",
@@ -108,7 +122,7 @@ export default function PengumumanPage() {
                     ],
                   },
                   {
-                    tanggal: "9 Februari 2026",
+                    tanggal: "12 Maret 2026",
                     pendeta: [
                       "Pdt. Maria",
                       "Pdt. Yohanes",

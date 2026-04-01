@@ -58,9 +58,11 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              "Ibadah Minggu pukul 06.00, 08.30, dan 17.00 WIB.",
-              "Persekutuan Doa hari Rabu pukul 19.00 WIB.",
-              "Retret Pemuda akan dilaksanakan 25 Maret 2026.",
+              "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
+              "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
+              "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
+              "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
+              "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
             ].map((item, index) => (
               <motion.div
                 key={index}
