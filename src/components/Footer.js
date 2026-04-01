@@ -47,7 +47,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-2">Ikuti Kami</h3>
           <div className="flex flex-col gap-3 mt-3">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/gkj_arcawinangun/"
               target="_blank"
               className="flex items-center gap-2 transition hover:text-pink-400"
             >
