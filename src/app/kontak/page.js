@@ -2,8 +2,51 @@
 
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function KontakPage() {
+  const [nama, setNama] = useState("");
+  const [kontak, setKontak] = useState("");
+  const [pesan, setPesan] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!nama || !kontak || !pesan) {
+      toast.error("Semua field harus diisi!");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ nama, kontak, pesan }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success("Pesan berhasil dikirim");
+        setNama("");
+        setKontak("");
+        setPesan("");
+      } else {
+        toast.error("Gagal mengirim pesan");
+      }
+    } catch (error) {
+      toast.error("Terjadi kesalahan, coba lagi");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <main className="space-y-24 bg-white">
       {/* HERO */}
@@ -73,18 +116,22 @@ export default function KontakPage() {
               Kirim Pesan / Permohonan Doa
             </h3>
 
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <motion.input
                 whileFocus={{ scale: 1.02 }}
                 type="text"
                 placeholder="Nama Lengkap"
+                value={nama}
+                onChange={(e) => setNama(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
 
               <motion.input
                 whileFocus={{ scale: 1.02 }}
-                type="email"
+                type="text"
                 placeholder="Email / No. WhatsApp"
+                value={kontak}
+                onChange={(e) => setKontak(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
 
@@ -92,6 +139,8 @@ export default function KontakPage() {
                 whileFocus={{ scale: 1.02 }}
                 rows={4}
                 placeholder="Tuliskan pesan atau permohonan doa..."
+                value={pesan}
+                onChange={(e) => setPesan(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
 
@@ -101,7 +150,7 @@ export default function KontakPage() {
                 type="submit"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
               >
-                Kirim Pesan
+                {loading ? "Mengirim..." : "Kirim Pesan"}
               </motion.button>
             </form>
           </motion.div>
