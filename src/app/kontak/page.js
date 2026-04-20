@@ -50,17 +50,18 @@ export default function KontakPage() {
   return (
     <main className="space-y-24 bg-white">
       {/* HERO */}
-      <motion.section
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="py-24 bg-blue-50 text-center"
-      >
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Kontak Kami</h1>
-        <p className="text-gray-700 max-w-2xl mx-auto">
-          Kami siap melayani, mendengarkan, dan mendoakan Anda.
-        </p>
-      </motion.section>
+      <section className="py-24 bg-blue-50 text-center">
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Kontak Kami</h1>
+          <p className="text-gray-700 max-w-2xl mx-auto">
+            Kami siap melayani, mendengarkan, dan mendoakan Anda.
+          </p>
+        </motion.section>
+      </section>
 
       {/* INFO KONTAK + FORM */}
       <section className="max-w-6xl mx-auto px-6">

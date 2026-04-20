@@ -45,21 +45,22 @@ export default function PelayananPage() {
   return (
     <main className="space-y-24 bg-white">
       {/* HERO */}
-      <motion.section
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="py-24 bg-blue-50 text-center"
-      >
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Pelayanan Gereja
-        </h1>
-        <p className="text-gray-700 max-w-2xl mx-auto">
-          Setiap jemaat memiliki karunia yang Tuhan berikan untuk melayani dan
-          menjadi berkat bagi sesama.
-        </p>
-      </motion.section>
+      <section className="py-24 bg-blue-50 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Pelayanan Gereja
+          </h1>
 
+          <p className="text-gray-700 max-w-2xl mx-auto">
+            Setiap jemaat memiliki karunia yang Tuhan berikan untuk melayani dan
+            menjadi berkat bagi sesama.
+          </p>
+        </motion.div>
+      </section>
       {/* DAFTAR PELAYANAN */}
       <section className="max-w-6xl mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
