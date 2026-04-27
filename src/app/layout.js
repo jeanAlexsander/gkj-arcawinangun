@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "GKJ Arcawinangun",
+  title: "GKJ Arcawinangun - Gereja di Purwokerto",
   description:
     "Website resmi Gereja Kristen Jawa (GKJ) Arcawinangun. Berisi jadwal ibadah, pengumuman gereja, dan informasi pelayanan.",
   keywords: [
@@ -25,8 +25,13 @@ export const metadata = {
     "Gereja di Purwokerto",
   ],
   authors: [{ name: "GKJ Arcawinangun" }],
+
+  verification: {
+    google: "1FSQX7voMn0b9YbfpHwnm6ysTxO6QHWLlctiRC7pfPs",
+  },
+
   openGraph: {
-    title: "GKJ Arcawinangun",
+    title: "GKJ Arcawinangun - Gereja di Purwokerto",
     description:
       "Website resmi Gereja Kristen Jawa Arcawinangun berisi jadwal ibadah dan informasi pelayanan gereja.",
     url: "https://gkj-arcawinangun.vercel.app",
