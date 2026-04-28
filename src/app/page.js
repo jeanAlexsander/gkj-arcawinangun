@@ -56,7 +56,7 @@ export default function Home() {
             Highlight Minggu Ini
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* <div className="grid md:grid-cols-3 gap-6">
             {[
               "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
               "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
@@ -74,7 +74,7 @@ export default function Home() {
                 <p className="text-gray-700">{item}</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           <div className="text-center mt-10">
             <Link

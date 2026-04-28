@@ -34,7 +34,7 @@ const pelayanans = [
     icon: Monitor,
     items: [
       "Sekretariat Gereja",
-      "Multimedia & IT",
+      "Multimedia",
       "Dokumentasi",
       "Perlengkapan & Kebersihan",
     ],

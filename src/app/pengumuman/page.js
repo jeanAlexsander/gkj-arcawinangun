@@ -29,6 +29,17 @@ export default function PengumumanPage() {
       image: "/lentera-januari.jpg",
     },
   ];
+  const highlights = [
+    // "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
+    // "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
+    // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
+    // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
+    // "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
+  ];
+  const events = [
+    // { title: "Retret Pemuda", date: "25 Maret 2026" },
+    // { title: "Perayaan Paskah", date: "31 Maret 2026" },
+  ];
   return (
     <main className="bg-white space-y-24">
       {/* HERO */}
@@ -63,23 +74,13 @@ export default function PengumumanPage() {
           </h2>
 
           <ul className="list-disc list-outside pl-6 text-lg text-gray-700 leading-relaxed space-y-2">
-            <li>
-              Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.
-            </li>
-            <li>
-              Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.
-            </li>
-            <li>
-              Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.
-            </li>
-            <li>
-              Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026
-              Pukul 05:00 di lapangan kelurahan Arcawinangun.
-            </li>
-            <li>
-              Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026
-              Pukul 08:00.
-            </li>
+            {highlights.length > 0 ? (
+              highlights.map((item, index) => <li key={index}>{item}</li>)
+            ) : (
+              <li className="list-none text-center text-gray-500">
+                📢 Belum ada highlight minggu ini
+              </li>
+            )}
           </ul>
         </motion.div>
       </section>
@@ -94,7 +95,7 @@ export default function PengumumanPage() {
           className="bg-white border border-blue-100 rounded-2xl p-8 shadow-sm"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Jadwal Pengkhotbah – Maret 2026
+            Jadwal Pengkhotbah – April 2026
           </h2>
 
           {/* HEADER JAM (HANYA SEKALI) */}
@@ -113,21 +114,12 @@ export default function PengumumanPage() {
               <div>
                 {[
                   {
-                    tanggal: "5 Maret 2026",
+                    tanggal: "26 April 2026",
                     pendeta: [
-                      "Pdt. Yohanes Fernando",
-                      "Pdt. Maria",
-                      "Pdt. Daniel",
-                      "Pdt. Samuel",
-                    ],
-                  },
-                  {
-                    tanggal: "12 Maret 2026",
-                    pendeta: [
-                      "Pdt. Maria",
-                      "Pdt. Yohanes",
-                      "Pdt. Samuel",
-                      "Pdt. Daniel",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Bangun Kriyanto, M.Pd.",
                     ],
                   },
                 ].map((item, index) => (
@@ -168,22 +160,25 @@ export default function PengumumanPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { title: "Retret Pemuda", date: "25 Maret 2026" },
-              { title: "Perayaan Paskah", date: "31 Maret 2026" },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: false }}
-                className="border border-blue-100 p-6 rounded-2xl"
-              >
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.date}</p>
-              </motion.div>
-            ))}
+            {events.length > 0 ? (
+              events.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: false }}
+                  className="border border-blue-100 p-6 rounded-2xl"
+                >
+                  <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.date}</p>
+                </motion.div>
+              ))
+            ) : (
+              <div className="col-span-2 text-center border border-dashed border-gray-300 p-8 rounded-2xl">
+                <p className="text-gray-500">Belum ada kegiatan mendatang 🙏</p>
+              </div>
+            )}
           </div>
         </motion.div>
       </section>
