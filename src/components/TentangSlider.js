@@ -4,10 +4,11 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const images = [
+  "/gereja_1.jpg",
+  "/gereja_2.jpg",
   "/kegiatan_1.jpg",
   "/kegiatan_2.jpg",
   "/kegiatan_3.jpg",
-  "/gereja.jpg",
 ];
 
 export default function TentangSlider() {
