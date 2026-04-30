@@ -29,15 +29,22 @@ export default function PengumumanPage() {
       image: "/lentera-januari.jpg",
     },
   ];
-  const highlights = [
+  const highlight = [
     // "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
     // "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
     // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
     // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
     // "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
   ];
-  const events = [
-    // { title: "Retret Pemuda", date: "25 Maret 2026" },
+  const kegiatanMendatang = [
+    {
+      title: "Sidang Majelis Pleno",
+      date: "04 Mei 2026",
+      time: "17:00 WIB",
+      location: "Gereja Induk",
+      description:
+        "Jemaat dapat menyampaikan usulan tertulis ke Majelis/Kantor Gereja.",
+    },
     // { title: "Perayaan Paskah", date: "31 Maret 2026" },
   ];
   return (
@@ -74,8 +81,8 @@ export default function PengumumanPage() {
           </h2>
 
           <ul className="list-disc list-outside pl-6 text-lg text-gray-700 leading-relaxed space-y-2">
-            {highlights.length > 0 ? (
-              highlights.map((item, index) => <li key={index}>{item}</li>)
+            {highlight.length > 0 ? (
+              highlight.map((item, index) => <li key={index}>{item}</li>)
             ) : (
               <li className="list-none text-center text-gray-500">
                 📢 Belum ada highlight minggu ini
@@ -95,7 +102,7 @@ export default function PengumumanPage() {
           className="bg-white border border-blue-100 rounded-2xl p-8 shadow-sm"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Jadwal Pengkhotbah – April 2026
+            Jadwal Pengkhotbah
           </h2>
 
           {/* HEADER JAM (HANYA SEKALI) */}
@@ -120,6 +127,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Bangun Kriyanto, M.Pd.",
+                    ],
+                  },
+                  {
+                    tanggal: "3 Mei 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Bangun Edi Sumirat, M.Si.",
                     ],
                   },
                 ].map((item, index) => (
@@ -160,18 +176,34 @@ export default function PengumumanPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {events.length > 0 ? (
-              events.map((item, index) => (
+            {kegiatanMendatang.length > 0 ? (
+              kegiatanMendatang.map((item, index) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, y: 25 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: false }}
-                  className="border border-blue-100 p-6 rounded-2xl"
+                  className="border border-blue-100 p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition"
                 >
-                  <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.date}</p>
+                  {/* Title */}
+                  <h3 className="font-semibold text-lg text-gray-800 mb-3">
+                    {item.title}
+                  </h3>
+
+                  {/* Date & Time */}
+                  <div className="text-gray-600 text-sm space-y-1">
+                    <p>🗓 {item.date}</p>
+                    {item.time && <p>⏰ {item.time}</p>}
+                    {item.location && <p>📍 {item.location}</p>}
+                  </div>
+
+                  {/* Description */}
+                  {item.description && (
+                    <p className="text-gray-500 text-sm mt-3">
+                      {item.description}
+                    </p>
+                  )}
                 </motion.div>
               ))
             ) : (
