@@ -5,30 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
-  const [selectedLentera, setSelectedLentera] = useState(null);
-  useEffect(() => {
-    if (selectedLentera) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [selectedLentera]);
-  const lenteraData = [
-    {
-      title: "Februari 2 2026",
-      file: "/lentera-februari-2-2026.pdf",
-      image: "/lentera-februari.jpg",
-    },
-    {
-      title: "Januari 2026",
-      file: "/lentera-januari-2026.pdf",
-      image: "/lentera-januari.jpg",
-    },
-  ];
   const highlight = [
     // "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
     // "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
