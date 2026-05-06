@@ -14,14 +14,20 @@ export default function PengumumanPage() {
   ];
   const kegiatanMendatang = [
     {
-      title: "Sidang Majelis Pleno",
-      date: "04 Mei 2026",
-      time: "17:00 WIB",
-      location: "Gereja Induk",
+      title: "Posyandu Lansia",
+      date: "10 Mei 2026",
+      time: "09:30 WIB",
+      location: "GKJ Arcawinangun (setelah Ibadah siang)",
       description:
-        "Jemaat dapat menyampaikan usulan tertulis ke Majelis/Kantor Gereja.",
+        "Dimohon kehadiran Bapak/Ibu Adiyuswa untuk memeriksakan kesehatannya.",
     },
-    // { title: "Perayaan Paskah", date: "31 Maret 2026" },
+    {
+      title: "Ibadah Kenaikan Tuhan Yesus Kristus",
+      date: "14 Mei 2026",
+      time: "07:00 WIB",
+      location: "GKJ Arcawinangun",
+      description: "Ibadah Akan dilayani oleh Pdt. Amos Renoardi, S.TH., M.Si.",
+    },
   ];
   return (
     <main className="bg-white space-y-24">
@@ -112,6 +118,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Bangun Edi Sumirat, M.Si.",
+                    ],
+                  },
+                  {
+                    tanggal: "10 Mei 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Sunarto Kriswartomo.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
                     ],
                   },
                 ].map((item, index) => (

@@ -37,7 +37,7 @@ export default function TentangPage() {
               Kabupaten Banyumas. Merupakan bagian dari GKJ Klasis Banyumas
               Utara dimana GKJ sendiri merupakan sebuah sinode gereja yang
               berkantor di Salatiga. Sinode GKJ merupakan bagian dari
-              persekutuan-persekutuan di Indonesia (PGI).
+              Persekutuan-persekutuan Gereja di Indonesia (PGI).
             </p>
           </div>
 
@@ -201,11 +201,11 @@ export default function TentangPage() {
           </h2>
 
           <Image
-            src="/gereja.jpg"
-            alt="Majelis GKJ Arcawinangun"
-            width={600}
-            height={400}
-            className="rounded-xl shadow-md mx-auto"
+            src="/struktur.png"
+            alt="Struktur Majelis GKJ Arcawinangun"
+            width={1000}
+            height={500}
+            className="rounded-xl shadow-md mx-auto object-contain"
           />
 
           <p className="text-gray-800 mt-4">
