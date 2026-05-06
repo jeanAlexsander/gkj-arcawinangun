@@ -26,7 +26,8 @@ export default function PengumumanPage() {
       date: "14 Mei 2026",
       time: "07:00 WIB",
       location: "GKJ Arcawinangun",
-      description: "Ibadah Akan dilayani oleh Pdt. Amos Renoardi, S.TH., M.Si.",
+      description:
+        "Ibadah Akan dilayani oleh Pdt. Amos Renoardi, S.TH., M.Si. (Manunggil)",
     },
   ];
   return (
