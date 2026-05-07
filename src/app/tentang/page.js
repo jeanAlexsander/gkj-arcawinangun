@@ -1,5 +1,7 @@
 "use client";
 
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Church, Users, HeartHandshake, Flag } from "lucide-react";
@@ -200,13 +202,17 @@ export default function TentangPage() {
             Struktur Majelis Gereja
           </h2>
 
-          <Image
-            src="/struktur.png"
-            alt="Struktur Majelis GKJ Arcawinangun"
-            width={1000}
-            height={500}
-            className="rounded-xl shadow-md mx-auto object-contain"
-          />
+          <PhotoProvider>
+            <PhotoView src="/struktur_new.png">
+              <Image
+                src="/struktur_new.png"
+                alt="Struktur Majelis GKJ Arcawinangun"
+                width={1000}
+                height={500}
+                className="rounded-xl shadow-md mx-auto object-contain cursor-pointer hover:scale-105 transition"
+              />
+            </PhotoView>
+          </PhotoProvider>
 
           <p className="text-gray-800 mt-4">
             Pelayanan gereja didukung oleh pendeta dan majelis yang setia
