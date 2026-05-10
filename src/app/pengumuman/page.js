@@ -6,21 +6,13 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    // "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
+    "Posyandu Lansia akan dilaksanakan 10 Mei 2026 Pukul 09:30 WIB.",
     // "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
     // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
     // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
     // "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
   ];
   const kegiatanMendatang = [
-    {
-      title: "Posyandu Lansia",
-      date: "10 Mei 2026",
-      time: "09:30 WIB",
-      location: "GKJ Arcawinangun (setelah Ibadah siang)",
-      description:
-        "Dimohon kehadiran Bapak/Ibu Adiyuswa untuk memeriksakan kesehatannya.",
-    },
     {
       title: "Ibadah Kenaikan Tuhan Yesus Kristus",
       date: "14 Mei 2026",

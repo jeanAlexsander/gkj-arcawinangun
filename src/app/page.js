@@ -55,13 +55,9 @@ export default function Home() {
             Highlight Minggu Ini
           </h2>
 
-          {/* <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              "Ibadah Kamis Putih akan dilaksanakan 2 April 2026 Pukul 17:00.",
-              "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
-              "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
-              "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
-              "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
+              "Posyandu Lansia akan dilaksanakan 10 Mei 2026 Pukul 09:30 WIB.",
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -73,7 +69,7 @@ export default function Home() {
                 <p className="text-gray-700">{item}</p>
               </motion.div>
             ))}
-          </div> */}
+          </div>
 
           <div className="text-center mt-10">
             <Link

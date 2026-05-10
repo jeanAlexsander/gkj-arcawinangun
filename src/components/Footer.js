@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="flex items-start gap-3 text-sm mb-2">
             <span>📍</span>
             <p>
-              Jl. Gereja No. 351, Arcawinangun,
+              Jl. Balai Kelurahan No. 351, Arcawinangun,
               <br />
               Purwokerto Timur, Kabupaten Banyumas,
               <br />
