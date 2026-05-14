@@ -13,12 +13,21 @@ export default function PengumumanPage() {
   ];
   const kegiatanMendatang = [
     {
-      title: "Ibadah Kenaikan Tuhan Yesus Kristus",
-      date: "14 Mei 2026",
+      id: "1",
+      title: "Ibadah Pentakosta",
+      date: "24 Mei 2026",
       time: "07:00 WIB",
       location: "GKJ Arcawinangun",
       description:
-        "Ibadah Akan dilayani oleh Pdt. Amos Renoardi, S.TH., M.Si. (Manunggil)",
+        "Ibadah akan dilayani oleh Pdt. Amos Renoardi, S.Th., M.Si. Sebelum ibadah dimulai, akan dilaksanakan prosesi arak-arakan dari Lapangan Kelurahan Arcawinangun menuju gedung gereja. Jemaat diharapkan hadir dan berkumpul pada pukul 06.30 WIB dengan dress code pakaian adat Jawa.",
+    },
+    {
+      id: "2",
+      title: "Ibadah Pentakosta",
+      date: "24 Mei 2026",
+      time: "08:00 WIB",
+      location: "GKJ Arcawinangun Pepanthan Karangnanas",
+      description: "Ibadah Akan dilayani oleh Sdr. Apriyanto, S.Th.",
     },
   ];
   return (
@@ -121,6 +130,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                     ],
                   },
+                  {
+                    tanggal: "17 Mei 2026",
+                    pendeta: [
+                      "Pdt. Harpin Kharisma Santituta, S.Si.",
+                      "Dr. Sutoyo, M.Pd.K.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Harpin Kharisma Santituta, S.Si.",
+                    ],
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -162,7 +180,7 @@ export default function PengumumanPage() {
             {kegiatanMendatang.length > 0 ? (
               kegiatanMendatang.map((item, index) => (
                 <motion.div
-                  key={item.title}
+                  key={item.id}
                   initial={{ opacity: 0, y: 25 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
