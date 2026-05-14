@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "Posyandu Lansia akan dilaksanakan 10 Mei 2026 Pukul 09:30 WIB.",
     // "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
     // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
     // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
@@ -60,7 +59,7 @@ export default function PengumumanPage() {
               highlight.map((item, index) => <li key={index}>{item}</li>)
             ) : (
               <li className="list-none text-center text-gray-500">
-                📢 Belum ada highlight minggu ini
+                Belum ada highlight minggu ini
               </li>
             )}
           </ul>
@@ -192,7 +191,7 @@ export default function PengumumanPage() {
               ))
             ) : (
               <div className="col-span-2 text-center border border-dashed border-gray-300 p-8 rounded-2xl">
-                <p className="text-gray-500">Belum ada kegiatan mendatang 🙏</p>
+                <p className="text-gray-500">Belum ada kegiatan mendatang</p>
               </div>
             )}
           </div>

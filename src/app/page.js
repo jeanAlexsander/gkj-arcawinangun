@@ -57,7 +57,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              "Posyandu Lansia akan dilaksanakan 10 Mei 2026 Pukul 09:30 WIB.",
+              // "Posyandu Lansia akan dilaksanakan 10 Mei 2026 Pukul 09:30 WIB.",
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -195,9 +195,12 @@ export default function Home() {
             Bergabunglah dalam pelayanan dan kegiatan GKJ Arcawinangun.
           </p>
 
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition">
+          <Link
+            href="/kontak"
+            className="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition inline-block"
+          >
             Hubungi Kami
-          </button>
+          </Link>
         </motion.div>
       </section>
     </main>

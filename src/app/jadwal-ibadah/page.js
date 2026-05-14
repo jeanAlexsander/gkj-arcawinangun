@@ -2,6 +2,7 @@
 
 import { Clock, CalendarDays, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function JadwalIbadahPage() {
   return (
@@ -219,26 +220,6 @@ export default function JadwalIbadahPage() {
         </motion.div>
       </section>
 
-      {/* INFORMASI PENTING */}
-      <section className="py-16">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: false }}
-          className="max-w-4xl mx-auto px-6"
-        >
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
-              Informasi Penting
-            </h3>
-            <ul className="space-y-2 text-gray-700 list-disc list-inside">
-              <li>Persembahan Minggu ini ada 3 Kantong</li>
-            </ul>
-          </div>
-        </motion.div>
-      </section>
-
       {/* CTA */}
       <section className="bg-blue-50 py-20 text-center">
         <motion.div
@@ -255,13 +236,21 @@ export default function JadwalIbadahPage() {
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition">
+            <Link
+              href="/kontak"
+              className="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition inline-block"
+            >
               Hubungi Kami
-            </button>
+            </Link>
 
-            <button className="flex items-center gap-2 border border-blue-600 text-blue-600 px-8 py-3 rounded-xl hover:bg-blue-100 transition">
+            <Link
+              href="https://maps.app.goo.gl/Ne9HKSoowria4abN8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-blue-600 text-blue-600 px-8 py-3 rounded-xl hover:bg-blue-100 transition"
+            >
               <MapPin size={18} /> Lihat Lokasi
-            </button>
+            </Link>
           </div>
         </motion.div>
       </section>
