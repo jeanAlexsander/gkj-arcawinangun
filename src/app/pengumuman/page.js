@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    // "Ibadah Jumat Agung akan dilaksanakan 3 April 2026 Pukul 08:00.",
+    "Retreat Majelis dan Komisi/Tim GKJ Arcawinangun akan dilaksanakan pada rabu - kamis 27-28 Mei 2026 di gedung diklat Batturaden Pukul 12.00.",
     // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
     // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
     // "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
@@ -137,6 +137,15 @@ export default function PengumumanPage() {
                       "Dr. Sutoyo, M.Pd.K.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Harpin Kharisma Santituta, S.Si.",
+                    ],
+                  },
+                  {
+                    tanggal: "24 Mei 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "-",
+                      "-",
+                      "Sdr. Apriyanto, S.Th.",
                     ],
                   },
                 ].map((item, index) => (

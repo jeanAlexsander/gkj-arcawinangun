@@ -57,7 +57,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              // "Posyandu Lansia akan dilaksanakan 10 Mei 2026 Pukul 09:30 WIB.",
+              "Retreat Majelis dan Komisi/Tim GKJ Arcawinangun akan dilaksanakan pada rabu - kamis 27-28 Mei 2026 di gedung diklat Batturaden Pukul 12.00.",
             ].map((item, index) => (
               <motion.div
                 key={index}
