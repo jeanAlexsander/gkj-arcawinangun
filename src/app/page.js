@@ -4,6 +4,7 @@ import Link from "next/link";
 import TentangSlider from "@/components/TentangSlider";
 import { Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import { title } from "framer-motion/client";
 
 export default function Home() {
   return (
@@ -57,7 +58,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              "Retreat Majelis dan Komisi/Tim GKJ Arcawinangun akan dilaksanakan pada rabu - kamis 27-28 Mei 2026 di gedung diklat Batturaden Pukul 12.00.",
+              {
+                title: "Sidang Majelis Pleno",
+                date: "3 Juni 2026",
+                time: "17:00 WIB",
+                location: "Gereja Induk GKJ Arcawinangun",
+                description:
+                  "Bagi Jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -66,7 +74,31 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-50 rounded-xl p-6 border border-gray-200"
               >
-                <p className="text-gray-700">{item}</p>
+                {/* Title */}
+                <h3 className="text-lg font-semibold text-gray-800 mt-4">
+                  {item.title}
+                </h3>
+
+                {/* Information */}
+                <div className="mt-3 space-y-1 text-sm text-gray-500">
+                  <div className="flex">
+                    <span className="w-16 block">Tanggal</span>
+                    <span>: {item.date}</span>
+                  </div>
+                  <div className="flex">
+                    <span className="w-16 block">Waktu</span>
+                    <span>: {item.time}</span>
+                  </div>
+                  <div className="flex">
+                    <span className="w-16 block">Lokasi</span>
+                    <span>: {item.location}</span>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm mt-4 line-clamp-3">
+                  {item.description}
+                </p>
               </motion.div>
             ))}
           </div>

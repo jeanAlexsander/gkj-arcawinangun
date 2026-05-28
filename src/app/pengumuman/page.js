@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "Retreat Majelis dan Komisi/Tim GKJ Arcawinangun akan dilaksanakan pada rabu - kamis 27-28 Mei 2026 di gedung diklat Batturaden Pukul 12.00.",
+    "Sidang Majelis Pleno akan dilaksanakan pada hari Rabu, 3 Juni 2026 pukul 17.00 WIB bertempat di Gereja Induk GKJ Arcawinangun. Bagi jemaat yang mempunyai kepentingan, dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
     // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
     // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
     // "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
@@ -14,20 +14,12 @@ export default function PengumumanPage() {
   const kegiatanMendatang = [
     {
       id: "1",
-      title: "Ibadah Pentakosta",
-      date: "24 Mei 2026",
-      time: "07:00 WIB",
-      location: "GKJ Arcawinangun",
+      title: "Sidang Majelis Pleno",
+      date: "3 Juni 2026",
+      time: "17:00 WIB",
+      location: "Gereja Induk GKJ Arcawinangun",
       description:
-        "Ibadah akan dilayani oleh Pdt. Amos Renoardi, S.Th., M.Si. Sebelum ibadah dimulai, akan dilaksanakan prosesi arak-arakan dari Lapangan Kelurahan Arcawinangun menuju gedung gereja. Jemaat diharapkan hadir dan berkumpul pada pukul 06.30 WIB dengan dress code pakaian adat Jawa.",
-    },
-    {
-      id: "2",
-      title: "Ibadah Pentakosta",
-      date: "24 Mei 2026",
-      time: "08:00 WIB",
-      location: "GKJ Arcawinangun Pepanthan Karangnanas",
-      description: "Ibadah Akan dilayani oleh Sdr. Apriyanto, S.Th.",
+        "Bagi Jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
     },
   ];
   return (
@@ -104,15 +96,6 @@ export default function PengumumanPage() {
               <div>
                 {[
                   {
-                    tanggal: "26 April 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Bangun Kriyanto, M.Pd.",
-                    ],
-                  },
-                  {
                     tanggal: "3 Mei 2026",
                     pendeta: [
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
@@ -146,6 +129,15 @@ export default function PengumumanPage() {
                       "-",
                       "-",
                       "Sdr. Apriyanto, S.Th.",
+                    ],
+                  },
+                  {
+                    tanggal: "31 Mei 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Dr. Rianto, M.M., M.Pd.K.",
                     ],
                   },
                 ].map((item, index) => (
