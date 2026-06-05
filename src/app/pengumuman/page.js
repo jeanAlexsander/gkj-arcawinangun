@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "Sidang Majelis Pleno akan dilaksanakan pada hari Rabu, 3 Juni 2026 pukul 17.00 WIB bertempat di Gereja Induk GKJ Arcawinangun. Bagi jemaat yang mempunyai kepentingan, dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
     // "Ibadah Sabtu Sunyi akan dilaksanakan 4 April 2026 Pukul 17:00.",
     // "Ibadah Paskah (Kebaktian Padang) akan dilaksanakan 5 April 2026 Pukul 05:00 di lapangan kelurahan Arcawinangun.",
     // "Ibadah Paskah Pepanthan Karangnanas akan dilaksanakan 5 April 2026 Pukul 08:00.",
@@ -14,12 +13,21 @@ export default function PengumumanPage() {
   const kegiatanMendatang = [
     {
       id: "1",
-      title: "Sidang Majelis Pleno",
-      date: "3 Juni 2026",
-      time: "17:00 WIB",
+      title: "Pembagian Kacamata Gratis",
+      date: "14 Juni 2026",
+      time: "10:00 WIB",
       location: "Gereja Induk GKJ Arcawinangun",
       description:
-        "Bagi Jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
+        "Kuota 50 orang, bagi jemaat yang membutuhkan dapat mendaftarkan diri melalui Komisi Adiyuswa Ibu Yoem Agus : (0858-7077-3219) | Bp. Ngadimin : (0857-2757-1862).",
+    },
+    {
+      id: "2",
+      title: "Senam Komisi Adiyuswa",
+      date: "20 Juni 2026",
+      time: "07:00 - Selesai WIB",
+      location: "Pantai Sagara & Jetis",
+      description:
+        "Dimohon keikutsertaan para adiyuswa. Dengan biaya kontribusi sebesar Rp. 180.000. Pendaftaran dan pelunasan pembayaran peserta paling lambat tanggal 10 Juni 2026, melalui Ibu Kris Purwati dan Ibu Sri Utami Sugiharto.",
     },
   ];
   return (
@@ -96,15 +104,6 @@ export default function PengumumanPage() {
               <div>
                 {[
                   {
-                    tanggal: "3 Mei 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Bangun Edi Sumirat, M.Si.",
-                    ],
-                  },
-                  {
                     tanggal: "10 Mei 2026",
                     pendeta: [
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
@@ -138,6 +137,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Dr. Rianto, M.M., M.Pd.K.",
+                    ],
+                  },
+                  {
+                    tanggal: "7 Juni 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Sdr. Sunarto Kriswartomo.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
                     ],
                   },
                 ].map((item, index) => (
