@@ -58,14 +58,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              {
-                title: "Sidang Majelis Pleno",
-                date: "3 Juni 2026",
-                time: "17:00 WIB",
-                location: "Gereja Induk GKJ Arcawinangun",
-                description:
-                  "Bagi Jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
-              },
+              // {
+              //   title: "Sidang Majelis Pleno",
+              //   date: "3 Juni 2026",
+              //   time: "17:00 WIB",
+              //   location: "Gereja Induk GKJ Arcawinangun",
+              //   description:
+              //     "Bagi Jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
+              // },
             ].map((item, index) => (
               <motion.div
                 key={index}
