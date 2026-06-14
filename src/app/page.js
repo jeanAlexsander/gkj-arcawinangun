@@ -50,65 +50,118 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: false }}
-          className="max-w-5xl mx-auto px-6"
+          className="max-w-6xl mx-auto px-6"
         >
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-10">
             Highlight Minggu Ini
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* Kembali menggunakan grid 3 kolom karena kartu sudah ringkas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {[
-              // {
-              //   title: "Sidang Majelis Pleno",
-              //   date: "3 Juni 2026",
-              //   time: "17:00 WIB",
-              //   location: "Gereja Induk GKJ Arcawinangun",
-              //   description:
-              //     "Bagi Jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas.",
-              // },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-200"
-              >
-                {/* Title */}
-                <h3 className="text-lg font-semibold text-gray-800 mt-4">
-                  {item.title}
-                </h3>
+              {
+                id: "1",
+                title: "Senam Komisi Adiyuswa",
+                date: "20 Juni 2026",
+                time: "07:00 WIB - Selesai",
+                location: "Pantai Sagara & Jetis",
+                description:
+                  "Senam Komisi Adiyuswa akan dilaksanakan pada 20 Juni 2026 Pukul 07.00 WIB di Pantai Sagara & Jetis. Dimohon keikutsertaan para adiyuswa.",
+              },
+              {
+                id: "2", // Tambahkan ID untuk routing nanti
+                title: "Sekolah Alkitab Liburan (SAL)",
+                date: "19 - 20 Juni 2026",
+                time: "Jumat 15:00 WIB - Sabtu 09.00 WIB",
+                location: "Gedung GKJ Arcawinangun",
+                description: `Kegiatan Sekolah Alkitab Liburan (SAL) untuk putra-putri kita.
 
-                {/* Information */}
-                <div className="mt-3 space-y-1 text-sm text-gray-500">
-                  <div className="flex">
-                    <span className="w-16 block">Tanggal</span>
-                    <span>: {item.date}</span>
-                  </div>
-                  <div className="flex">
-                    <span className="w-16 block">Waktu</span>
-                    <span>: {item.time}</span>
-                  </div>
-                  <div className="flex">
-                    <span className="w-16 block">Lokasi</span>
-                    <span>: {item.location}</span>
-                  </div>
-                </div>
+Perlengkapan yang wajib dibawa:
+• Alkitab dan Alat Tulis
+• Alat mandi dan pakaian ganti
+• Selimut / Pakaian hangat
+• Tempat minum (tumbler)
+• Kasur lantai / kasur lipat dan bantal (opsional)
 
-                {/* Description */}
-                <p className="text-gray-600 text-sm mt-4 line-clamp-3">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
+Keterangan & Ketentuan:
+• Peserta yang boleh menginap di gereja adalah kelas 1 SD s.d. 3 SMP.
+• Panitia hanya menyediakan kasur cadangan (peserta disarankan membawa sendiri).
+• Akan ada edaran persembahan (1 kantong).
+
+Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapat mengikuti kegiatan SAL ini dengan baik dan lancar.`,
+              },
+            ].map((item, index) => {
+              // Logika memotong teks: Jika lebih dari 120 karakter, potong dan tambahkan "..."
+              const isLongText = item.description.length > 120;
+              const shortDescription = isLongText
+                ? item.description.slice(0, 120) + "..."
+                : item.description;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-md hover:border-blue-200 transition-all duration-300 flex flex-col justify-between h-full"
+                >
+                  <div>
+                    {/* Title */}
+                    <h3 className="text-lg font-bold text-gray-800 line-clamp-2 min-h-[3.5rem]">
+                      {item.title}
+                    </h3>
+
+                    {/* Information */}
+                    <div className="mt-3 space-y-1.5 text-xs text-gray-600 border-b border-gray-200/60 pb-3">
+                      <div className="flex">
+                        <span className="w-14 font-semibold text-gray-500 shrink-0">
+                          Tanggal
+                        </span>
+                        <span className="truncate">: {item.date}</span>
+                      </div>
+                      <div className="flex">
+                        <span className="w-14 font-semibold text-gray-500 shrink-0">
+                          Waktu
+                        </span>
+                        <span className="truncate">: {item.time}</span>
+                      </div>
+                      <div className="flex">
+                        <span className="w-14 font-semibold text-gray-500 shrink-0">
+                          Lokasi
+                        </span>
+                        <span className="truncate">: {item.location}</span>
+                      </div>
+                    </div>
+
+                    {/* Description Singkat */}
+                    <p className="text-gray-600 text-sm mt-3 leading-relaxed text-left">
+                      {shortDescription}
+                    </p>
+                  </div>
+
+                  {/* Tombol aksi internal kartu jika teksnya panjang */}
+                  {isLongText && (
+                    <div className="mt-4 pt-2">
+                      <Link
+                        href="/pengumuman#highlight-minggu-ini" // Otomatis scroll ke event spesifik di halaman pengumuman
+                        className="text-xs font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition-colors"
+                      >
+                        Baca Selengkapnya
+                      </Link>
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
 
-          <div className="text-center mt-10">
+          {/* Tombol Utama */}
+          <div className="text-center mt-12">
             <Link
               href="/pengumuman"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition shadow-sm font-medium"
             >
-              Lihat Pengumuman Lengkap
+              Lihat Semua Pengumuman
             </Link>
           </div>
         </motion.div>

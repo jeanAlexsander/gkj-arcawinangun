@@ -130,7 +130,7 @@ export default function Footer() {
 
             <div className="bg-white p-3 rounded-xl flex flex-col gap-2 text-left shadow-md">
               <div className="flex items-center gap-2">
-                <span className="px-1.5 py-0.5 bg-blue-900 text-white font-bold text-[10px] rounded tracking-wide">
+                <span className="px-1.5 py-0.5 bg-orange-400 text-white font-bold text-[10px] rounded tracking-wide">
                   BNI
                 </span>
                 <span className="text-xs text-gray-600 font-medium">

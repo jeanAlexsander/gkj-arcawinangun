@@ -109,19 +109,13 @@ export default function JadwalIbadahPage() {
               {
                 title: "Doa Fajar",
                 day: "Sabtu",
-                time: "17.30 WIB",
-              },
-              {
-                title: "Persekutuan Doa Wanita",
-                day: "Sabtu",
-                time: "17.30 WIB",
+                time: "05.00 WIB",
               },
               {
                 title: "Persekutuan Doa Pemuda & Remaja",
                 day: "Sabtu",
                 time: "17.30 WIB",
               },
-              { title: "Persekutuan Doa", day: "Rabu", time: "19.00 WIB" },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
