@@ -104,15 +104,6 @@ export default function PengumumanPage() {
               <div>
                 {[
                   {
-                    tanggal: "10 Mei 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Sunarto Kriswartomo.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                    ],
-                  },
-                  {
                     tanggal: "17 Mei 2026",
                     pendeta: [
                       "Pdt. Harpin Kharisma Santituta, S.Si.",
@@ -146,6 +137,15 @@ export default function PengumumanPage() {
                       "Sdr. Sunarto Kriswartomo.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
+                    ],
+                  },
+                  {
+                    tanggal: "14 Juni 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Bangun Kriyanto, M.Pd.",
                     ],
                   },
                 ].map((item, index) => (
