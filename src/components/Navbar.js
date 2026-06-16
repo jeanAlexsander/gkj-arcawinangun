@@ -83,7 +83,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[450px] opacity-100 py-4" : "max-h-0 opacity-0"
+          isOpen ? "max-h-112.5 opacity-100 py-4" : "max-h-0 opacity-0"
         }`}
       >
         {/* 7. Sesuaikan background menu mobile dengan dark:bg-zinc-900 */}

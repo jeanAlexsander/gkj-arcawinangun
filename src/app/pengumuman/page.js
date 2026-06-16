@@ -104,7 +104,7 @@ export default function PengumumanPage() {
           </h2>
 
           <div className="overflow-x-auto">
-            <div className="min-w-[780px]">
+            <div className="min-w-195">
               {/* HEADER TABEL */}
               <div className="grid grid-cols-5 gap-6 border-b border-gray-200 dark:border-zinc-800 pb-4 mb-4 text-center font-semibold text-blue-700 dark:text-blue-400 text-sm sm:text-base">
                 <div className="text-left pl-7">Tanggal</div>

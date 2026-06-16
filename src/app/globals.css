@@ -8,6 +8,11 @@
   --foreground: #171717;
 }
 
+@theme {
+  --spacing-195: 780px;
+  --spacing-112_5: 450px;
+}
+
 .dark {
   --background: #09090b; /* zinc-950 */
   --foreground: #fafafa; /* zinc-50 */
