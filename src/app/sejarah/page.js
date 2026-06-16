@@ -5,16 +5,17 @@ import { motion } from "framer-motion";
 
 export default function SejarahPage() {
   return (
-    <main className="bg-white">
-      {/* HERO */}
-      <section className="py-20 bg-gray-50 text-center">
+    // Set container utama agar mendukung dark mode zinc-950
+    <main className="bg-white dark:bg-zinc-950 transition-colors duration-300 min-h-screen pb-12">
+      {/* HERO - bg-gray-50 -> dark:bg-zinc-900 */}
+      <section className="py-20 bg-gray-50 dark:bg-zinc-900 text-center transition-colors">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto px-6"
         >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-4">
             Sejarah GKJ Arcawinangun
           </h1>
         </motion.div>
@@ -27,7 +28,7 @@ export default function SejarahPage() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto px-6 space-y-6 text-lg leading-relaxed text-gray-800 text-justify"
+          className="max-w-4xl mx-auto px-6 space-y-6 text-lg leading-relaxed text-gray-800 dark:text-zinc-300 text-justify"
         >
           <p>
             GKJ Arcawinangun hadir sebagai buah dan kesaksian tentang karya
@@ -45,11 +46,12 @@ export default function SejarahPage() {
           <p>
             Dengan persetujuan Majelis GKJ Purwokerto, jemaat mulai beribadah di
             rumah-rumah. Dalam kesederhanaan itulah iman dipelihara dan
-            ditumbuhkan. Para pendiri—yang berasal dari kalangan terdidik
-            menunjukkan kepemimpinan yang rendah hati, tertib, dan selaras
-            dengan tata gereja presbiterial. Mereka tidak hanya merintis ibadah,
-            tetapi juga menanamkan teladan kolegialitas, kebersamaan, dan
-            kesatuan, bahkan di tengah dinamika sosial-politik yang tidak mudah.
+            ditumbuhkan. Para pendiri—yang berasal dari kalangan
+            terdidik—menunjukkan kepemimpinan yang rendah hati, tertib, dan
+            selaras dengan tata gereja presbiterial. Mereka tidak hanya merintis
+            ibadah, tetapi juga menanamkan teladan kolegialitas, kebersamaan,
+            dan kesatuan, bahkan di tengah dinamika sosial-politik yang tidak
+            mudah.
           </p>
 
           <p>
@@ -92,39 +94,54 @@ export default function SejarahPage() {
             kesaksiannya.
           </p>
 
-          <div className="space-y-4 mt-6">
-            <h3 className="text-xl font-semibold text-gray-900">
+          {/* BOX MAJELIS PERTAMA - bg-blue-50/50 -> dark:bg-zinc-900/50 */}
+          <div className="space-y-4 mt-8 p-6 bg-blue-50/50 dark:bg-zinc-900/50 border border-blue-100 dark:border-zinc-800 rounded-xl transition-colors">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">
               Adapun Majelis Pertama GKJ Arcawinangun adalah sebagai berikut:
             </h3>
 
-            <div>
-              <p className="font-semibold">Tua-tua:</p>
-              <ol className="list-decimal list-inside space-y-1">
-                <li>Bpk. Yokas Yosowiharjo</li>
-                <li>Bpk. Suwardi Wiryodihardjo</li>
-                <li>Bpk. Sumarno Ks.</li>
-                <li>Bpk. Pudjo Sanyoto</li>
-                <li>Bpk. Mastur Widjaja</li>
-              </ol>
-            </div>
+            <div className="grid sm:grid-cols-3 gap-6 pt-2">
+              <div>
+                <p className="font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                  Tua-tua:
+                </p>
+                <ol className="list-decimal list-inside space-y-1 text-gray-700 dark:text-zinc-300">
+                  <li>Bpk. Yokas Yosowiharjo</li>
+                  <li>Bpk. Suwardi Wiryodihardjo</li>
+                  <li>Bpk. Sumarno Ks.</li>
+                  <li>Bpk. Pudjo Sanyoto</li>
+                  <li>Bpk. Mastur Widjaja</li>
+                </ol>
+              </div>
 
-            <div>
-              <p className="font-semibold">Diaken:</p>
-              <ol start={6} className="list-decimal list-inside space-y-1">
-                <li>Bpk. Ralim Tirtoatmodjo</li>
-                <li>Ibu Sunaryatmi</li>
-              </ol>
-            </div>
+              <div>
+                <p className="font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                  Diaken:
+                </p>
+                <ol
+                  start={6}
+                  className="list-decimal list-inside space-y-1 text-gray-700 dark:text-zinc-300"
+                >
+                  <li>Bpk. Ralim Tirtoatmodjo</li>
+                  <li>Ibu Sunaryatmi</li>
+                </ol>
+              </div>
 
-            <div>
-              <p className="font-semibold">Pendeta Konsulen:</p>
-              <ol start={8} className="list-decimal list-inside">
-                <li>Pdt. Widjojo Hadipranoto, Sm.Th.</li>
-              </ol>
+              <div>
+                <p className="font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                  Pendeta Konsulen:
+                </p>
+                <ol
+                  start={8}
+                  className="list-decimal list-inside text-gray-700 dark:text-zinc-300"
+                >
+                  <li>Pdt. Widjojo Hadipranoto, Sm.Th.</li>
+                </ol>
+              </div>
             </div>
           </div>
 
-          <p>
+          <p className="pt-4">
             Pentahbisan Pdt. Sudjatmoko, Sm.Th. pada 3 Januari 1981 sebagai
             pendeta pertama menjadi tonggak penting. Dengan kemajelisan yang
             lengkap, GKJ Arcawinangun mulai menata kehidupan bergereja secara
@@ -152,10 +169,10 @@ export default function SejarahPage() {
         </motion.div>
       </section>
 
-      {/* GALERI FOTO */}
-      <section className="py-20 bg-gray-50">
+      {/* GALERI FOTO - bg-gray-50 -> dark:bg-zinc-900 */}
+      <section className="py-20 bg-gray-50 dark:bg-zinc-900 border-t border-gray-100 dark:border-zinc-800/50 transition-colors">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-zinc-100 mb-12">
             Dokumentasi Perjalanan Iman
           </h2>
 
@@ -167,14 +184,18 @@ export default function SejarahPage() {
             ].map((img, index) => (
               <div
                 key={index}
-                className="relative w-full h-72 overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
+                className="relative w-full h-72 overflow-hidden rounded-xl shadow-md border border-transparent dark:border-zinc-800 transition-transform duration-300 hover:scale-105 group"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-all duration-300 group-hover:brightness-95"
                 />
+                {/* Overlay teks tipis penanda dokumentasi */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-medium text-sm">{img.alt}</p>
+                </div>
               </div>
             ))}
           </div>
