@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 export default function SejarahPage() {
   return (
-    // Set container utama agar mendukung dark mode zinc-950
     <main className="bg-white dark:bg-zinc-950 transition-colors duration-300 min-h-screen pb-12">
       {/* HERO - bg-gray-50 -> dark:bg-zinc-900 */}
       <section className="py-20 bg-gray-50 dark:bg-zinc-900 text-center transition-colors">
@@ -94,7 +93,6 @@ export default function SejarahPage() {
             kesaksiannya.
           </p>
 
-          {/* BOX MAJELIS PERTAMA - bg-blue-50/50 -> dark:bg-zinc-900/50 */}
           <div className="space-y-4 mt-8 p-6 bg-blue-50/50 dark:bg-zinc-900/50 border border-blue-100 dark:border-zinc-800 rounded-xl transition-colors">
             <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">
               Adapun Majelis Pertama GKJ Arcawinangun adalah sebagai berikut:
@@ -169,7 +167,6 @@ export default function SejarahPage() {
         </motion.div>
       </section>
 
-      {/* GALERI FOTO - bg-gray-50 -> dark:bg-zinc-900 */}
       <section className="py-20 bg-gray-50 dark:bg-zinc-900 border-t border-gray-100 dark:border-zinc-800/50 transition-colors">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-zinc-100 mb-12">

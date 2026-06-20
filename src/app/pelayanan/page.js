@@ -96,7 +96,6 @@ export default function PelayananPage() {
         </div>
       </section>
 
-      {/* AJAKAN MELAYANI - bg-gray-50 -> dark:bg-zinc-900 */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

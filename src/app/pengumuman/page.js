@@ -45,7 +45,6 @@ export default function PengumumanPage() {
   ];
 
   return (
-    // 1. Tambah dark:bg-zinc-950 & transisi warna utama halaman
     <main className="bg-white dark:bg-zinc-950 space-y-24 transition-colors duration-300 min-h-screen">
       {/* HERO - Menyesuaikan bg-blue-50 -> dark:bg-zinc-900 */}
       <section className="py-24 bg-blue-50 dark:bg-zinc-900 text-center transition-colors">
@@ -224,9 +223,9 @@ export default function PengumumanPage() {
 
                   {/* Date & Time */}
                   <div className="text-gray-600 dark:text-zinc-400 text-sm space-y-1 mb-3">
-                    <p>🗓 {item.date}</p>
-                    {item.time && <p>⏰ {item.time}</p>}
-                    {item.location && <p>📍 {item.location}</p>}
+                    <p>Tanggal : {item.date}</p>
+                    {item.time && <p>Waktu : {item.time}</p>}
+                    {item.location && <p>Lokasi : {item.location}</p>}
                   </div>
 
                   {/* Description */}

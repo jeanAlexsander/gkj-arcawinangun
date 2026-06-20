@@ -16,7 +16,7 @@ export default function Home() {
           alt="GKJ Arcawinangun"
           fill
           className="object-cover"
-          priority // Ditambahkan priority agar LCP gambar hero lebih cepat dimuat
+          priority
         />
 
         {/* Overlay disesuaikan agar tetap kontras di kedua mode */}
@@ -46,7 +46,6 @@ export default function Home() {
       </section>
 
       {/* HIGHLIGHT MINGGU INI */}
-      {/* 2. Sesuaikan background section dan judul */}
       <section className="py-24 bg-white dark:bg-zinc-950 transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -103,7 +102,6 @@ Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapa
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  // 3. Ubah warna card (bg-gray-50 -> dark:bg-zinc-900) & border
                   className="bg-gray-50 dark:bg-zinc-900 rounded-xl p-6 border border-gray-200 dark:border-zinc-800 hover:shadow-md hover:border-blue-200 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between h-full"
                 >
                   <div>
@@ -167,7 +165,6 @@ Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapa
       </section>
 
       {/* TENTANG */}
-      {/* 4. Ubah sebaliknya: Section ini sedikit kontras (bg-gray-50 -> dark:bg-zinc-900) */}
       <section className="py-24 bg-gray-50 dark:bg-zinc-900/50 border-y border-transparent dark:border-zinc-900 transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -202,7 +199,6 @@ Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapa
       </section>
 
       {/* JADWAL */}
-      {/* 5. Kembalikan latar utama di section Jadwal */}
       <section className="py-24 bg-white dark:bg-zinc-950 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-6 space-y-16">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-zinc-100 text-center">
@@ -277,7 +273,6 @@ Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapa
       </section>
 
       {/* CTA SECTION */}
-      {/* 7. Berikan warna background yang soft namun kontras pada CTA */}
       <section className="py-20 bg-blue-50 dark:bg-zinc-900/30 text-center transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

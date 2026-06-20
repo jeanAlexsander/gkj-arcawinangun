@@ -46,7 +46,6 @@ export default function KontakPage() {
   };
 
   return (
-    // Set container utama agar mendukung dark mode zinc-950
     <main className="space-y-24 bg-white dark:bg-zinc-950 transition-colors duration-300 min-h-screen pb-24">
       {/* HERO - bg-blue-50 -> dark:bg-zinc-900 */}
       <section className="py-24 bg-blue-50 dark:bg-zinc-900 text-center transition-colors">
@@ -110,7 +109,6 @@ export default function KontakPage() {
             </div>
           </motion.div>
 
-          {/* KANAN: FORM INPUT & TEXTAREA */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -130,7 +128,6 @@ export default function KontakPage() {
                 placeholder="Nama Lengkap"
                 value={nama}
                 onChange={(e) => setNama(e.target.value)}
-                // Menata input field agar mendukung gelap-terang secara solid
                 className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-gray-300 dark:border-zinc-800 text-gray-900 dark:text-zinc-100 placeholder-gray-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
               />
 
@@ -179,7 +176,6 @@ export default function KontakPage() {
           <iframe
             title="Lokasi GKJ Arcawinangun"
             src="https://www.google.com/maps?q=GKJ%20Arcawinangun&output=embed"
-            // Mengubah h-[400px] menjadi h-100 sesuai rekomendasi Tailwind v4
             className="w-full h-100 border-0 rounded-2xl dark:brightness-90 transition-all"
             loading="lazy"
           />

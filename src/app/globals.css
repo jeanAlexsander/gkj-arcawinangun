@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* 1. Aturan wajib Tailwind v4 untuk memetakan variant dark ke class .dark */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -14,8 +13,8 @@
 }
 
 .dark {
-  --background: #09090b; /* zinc-950 */
-  --foreground: #fafafa; /* zinc-50 */
+  --background: #09090b;
+  --foreground: #fafafa;
 }
 
 @theme inline {

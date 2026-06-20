@@ -44,12 +44,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // 2. Tambahkan suppressHydrationWarning di sini agar tidak ada error di console browser
     <html lang="id" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen overflow-x-hidden`}
       >
-        {/* 3. Bungkus seluruh konten aplikasi di dalam ThemeProvider */}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
