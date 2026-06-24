@@ -60,36 +60,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {[
-              {
-                id: "1",
-                title: "Senam Komisi Adiyuswa",
-                date: "20 Juni 2026",
-                time: "07:00 WIB - Selesai",
-                location: "Pantai Sagara & Jetis",
-                description:
-                  "Senam Komisi Adiyuswa akan dilaksanakan pada 20 Juni 2026 Pukul 07.00 WIB di Pantai Sagara & Jetis. Dimohon keikutsertaan para adiyuswa.",
-              },
-              {
-                id: "2",
-                title: "Sekolah Alkitab Liburan (SAL)",
-                date: "19 - 20 Juni 2026",
-                time: "Jumat 15:00 WIB - Sabtu 09.00 WIB",
-                location: "Gedung GKJ Arcawinangun",
-                description: `Kegiatan Sekolah Alkitab Liburan (SAL) untuk putra-putri kita.
-Perlengkapan yang wajib dibawa:
-• Alkitab dan Alat Tulis
-• Alat mandi dan pakaian ganti
-• Selimut / Pakaian hangat
-• Tempat minum (tumbler)
-• Kasur lantai / kasur lipat dan bantal (opsional)
-
-Keterangan & Ketentuan:
-• Peserta yang boleh menginap di gereja adalah kelas 1 SD s.d. 3 SMP.
-• Panitia hanya menyediakan kasur cadangan (peserta disarankan membawa sendiri).
-• Akan ada edaran persembahan (1 kantong).
-
-Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapat mengikuti kegiatan SAL ini dengan baik dan lancar.`,
-              },
+              // {
+              //   id: "1",
+              //   title: "Senam Komisi Adiyuswa",
+              //   date: "20 Juni 2026",
+              //   time: "07:00 WIB - Selesai",
+              //   location: "Pantai Sagara & Jetis",
+              //   description:
+              //     "Senam Komisi Adiyuswa akan dilaksanakan pada 20 Juni 2026 Pukul 07.00 WIB di Pantai Sagara & Jetis. Dimohon keikutsertaan para adiyuswa.",
+              // },
             ].map((item, index) => {
               const isLongText = item.description.length > 120;
               const shortDescription = isLongText

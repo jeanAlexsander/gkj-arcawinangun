@@ -6,42 +6,19 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "Senam Komisi Adiyuswa akan dilaksanakan pada 20 Juni 2026 Pukul 07.00 WIB di Pantai Sagara & Jetis. Dimohon keikutsertaan para adiyuswa.",
-    "Sekolah Alkitab Liburan (SAL) akan dilaksanakan pada 19-20 Juni 2026 di Gedung GKJ Arcawinangun.",
+    //"Senam Komisi Adiyuswa akan dilaksanakan pada 20 Juni 2026 Pukul 07.00 WIB di Pantai Sagara & Jetis. Dimohon keikutsertaan para adiyuswa.",
   ];
 
   const kegiatanMendatang = [
-    {
-      id: "1",
-      title: "Senam Komisi Adiyuswa",
-      date: "20 Juni 2026",
-      time: "07:00 - Selesai WIB",
-      location: "Pantai Sagara & Jetis",
-      description:
-        "Dimohon keikutsertaan para adiyuswa. Dengan biaya kontribusi sebesar Rp. 180.000. Pendaftaran dan pelunasan pembayaran peserta paling lambat tanggal 10 Juni 2026, melalui Ibu Kris Purwati dan Ibu Sri Utami Sugiharto.",
-    },
-    {
-      id: "2",
-      title: "Sekolah Alkitab Liburan (SAL)",
-      date: "19 - 20 Juni 2026",
-      time: "Jumat 15:00 WIB - Sabtu 09.00 WIB",
-      location: "Gedung GKJ Arcawinangun",
-      description: `Kegiatan Sekolah Alkitab Liburan (SAL) untuk putra-putri kita.
-
-            Perlengkapan yang wajib dibawa:
-            • Alkitab dan Alat Tulis
-            • Alat mandi dan pakaian ganti
-            • Selimut / Pakaian hangat
-            • Tempat minum (tumbler)
-            • Kasur lantai / kasur lipat dan bantal (opsional)
-
-            Keterangan & Ketentuan:
-            • Peserta yang boleh menginap di gereja adalah kelas 1 SD s.d. 3 SMP.
-            • Panitia hanya menyediakan kasur cadangan (peserta disarankan membawa sendiri).
-            • Akan ada edaran persembahan (1 kantong).
-
-            Mohon dukungan doa dari Bapak/Ibu sekalian supaya putra dan putri Bapak/Ibu dapat mengikuti kegiatan SAL ini dengan baik dan lancar.`,
-    },
+    // {
+    //   id: "1",
+    //   title: "Senam Komisi Adiyuswa",
+    //   date: "20 Juni 2026",
+    //   time: "07:00 - Selesai WIB",
+    //   location: "Pantai Sagara & Jetis",
+    //   description:
+    //     "Dimohon keikutsertaan para adiyuswa. Dengan biaya kontribusi sebesar Rp. 180.000. Pendaftaran dan pelunasan pembayaran peserta paling lambat tanggal 10 Juni 2026, melalui Ibu Kris Purwati dan Ibu Sri Utami Sugiharto.",
+    // },
   ];
 
   return (
@@ -117,15 +94,6 @@ export default function PengumumanPage() {
               <div className="divide-y divide-gray-100 dark:divide-zinc-800/60">
                 {[
                   {
-                    tanggal: "24 Mei 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "-",
-                      "-",
-                      "Sdr. Apriyanto, S.Th.",
-                    ],
-                  },
-                  {
                     tanggal: "31 Mei 2026",
                     pendeta: [
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
@@ -159,6 +127,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Dr. Sutoyo, M.Pd.K.",
+                    ],
+                  },
+                  {
+                    tanggal: "28 Juni 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Dr. Sutoyo, M.Pd.K.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
                     ],
                   },
                 ].map((item, index) => (
