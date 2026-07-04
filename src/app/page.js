@@ -63,7 +63,7 @@ export default function Home() {
               {
                 id: "1",
                 title: "Perjamuan Kudus",
-                date: "5 Juni 2026",
+                date: "5 Juli 2026",
                 time: "07:00 WIB (Gereja Induk) & 09:30 WIB (Pepanthan Karangnanas)",
                 location: "Gereja Induk & Pepanthan Karangnanas",
                 description:
