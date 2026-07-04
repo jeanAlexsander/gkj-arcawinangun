@@ -60,15 +60,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {[
-              // {
-              //   id: "1",
-              //   title: "Senam Komisi Adiyuswa",
-              //   date: "20 Juni 2026",
-              //   time: "07:00 WIB - Selesai",
-              //   location: "Pantai Sagara & Jetis",
-              //   description:
-              //     "Senam Komisi Adiyuswa akan dilaksanakan pada 20 Juni 2026 Pukul 07.00 WIB di Pantai Sagara & Jetis. Dimohon keikutsertaan para adiyuswa.",
-              // },
+              {
+                id: "1",
+                title: "Perjamuan Kudus",
+                date: "5 Juni 2026",
+                time: "07:00 WIB (Gereja Induk) & 09:30 WIB (Pepanthan Karangnanas)",
+                location: "Gereja Induk & Pepanthan Karangnanas",
+                description:
+                  "Sakramen Perjamuan Kudus akan dilaksanakan pada hari MINGGU, 05 Juli 2026 di Gereja Induk (Manunggil) pukul 07.00 WIB dan Pepanthan Karangnanas pukul 09.30 WIB. Mohon partisipasi jemaat untuk hadir dan mengikuti sakramen ini dengan penuh khidmat. ",
+              },
             ].map((item, index) => {
               const isLongText = item.description.length > 120;
               const shortDescription = isLongText
