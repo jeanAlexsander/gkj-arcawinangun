@@ -12,7 +12,7 @@ export default function PengumumanPage() {
   const kegiatanMendatang = [
     {
       id: "1",
-      title: "Rapat Koordinasi Semester I",
+      title: "Rapat Koordinasi Semester II",
       date: "20 Juli 2026",
       time: "17:00 - Selesai WIB",
       location: "Gedung GKJ Arcawinangun",
