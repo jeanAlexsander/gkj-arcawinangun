@@ -62,12 +62,12 @@ export default function Home() {
             {[
               {
                 id: "1",
-                title: "Perjamuan Kudus",
-                date: "5 Juli 2026",
-                time: "07:00 WIB (Gereja Induk) & 09:30 WIB (Pepanthan Karangnanas)",
-                location: "Gereja Induk & Pepanthan Karangnanas",
+                title: "Posyandu Lansia",
+                date: "12 Juli 2026",
+                time: "09:30 WIB (Setelah Ibadah Siang)",
+                location: "GKJ Arcawinangun",
                 description:
-                  "Sakramen Perjamuan Kudus akan dilaksanakan pada hari MINGGU, 05 Juli 2026 di Gereja Induk (Manunggil) pukul 07.00 WIB dan Pepanthan Karangnanas pukul 09.30 WIB. Mohon partisipasi jemaat untuk hadir dan mengikuti sakramen ini dengan penuh khidmat. ",
+                  "Diinformasikan bahwa posyandu lansia akan diadakan hari Minggu tanggal 12 Juli 2026 pukul 09.30 wib (setelah ibadah siang), mohon kehadiran para Adiyuswa.",
               },
             ].map((item, index) => {
               const isLongText = item.description.length > 120;

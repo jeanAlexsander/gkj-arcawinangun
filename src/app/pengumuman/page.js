@@ -6,27 +6,45 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "Sakramen Perjamuan Kudus akan dilaksanakan pada hari MINGGU, 05 Juli 2026 di Gereja Induk (Manunggil) pukul 07.00 WIB danPepanthan Karangnanas pukul 09.30 WIB",
+    "posyandu lansia akan diadakan hari Minggu tanggal 12 Juli 2026 pukul 09.30 wib (setelah ibadah siang), mohon kehadiran para Adiyuswa.",
   ];
 
   const kegiatanMendatang = [
     {
       id: "1",
-      title: "Perjamuan Kudus",
-      date: "05 Juli 2026",
-      time: "07:00 WIB (Gereja Induk) & 09:30 WIB (Pepanthan Karangnanas)",
-      location: "Gereja Induk & Pepanthan Karangnanas",
-      description:
-        "Sakramen Perjamuan Kudus akan dilaksanakan pada hari MINGGU, 05 Juli 2026 di Gereja Induk (Manunggil) pukul 07.00 WIB dan Pepanthan Karangnanas pukul 09.30 WIB. Mohon partisipasi jemaat untuk hadir dan mengikuti sakramen ini dengan penuh khidmat.",
-    },
-    {
-      id: "3",
       title: "Rapat Koordinasi Semester I",
       date: "20 Juli 2026",
       time: "17:00 - Selesai WIB",
       location: "Gedung GKJ Arcawinangun",
       description:
         "Mohon perhatian untuk Komisi / Tim dapat mempersiapkan laporkan kegiatan dan laporan keuangan Semester 1 periode bulan Januari-Juni 2026 dan rencana program semester 2. ",
+    },
+    {
+      id: "2",
+      title: "Donor Darah",
+      date: "19 Juli 2026",
+      time: "07:00 - 11:00 WIB",
+      location: "Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun.",
+      description:
+        "Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng",
+    },
+    {
+      id: "3",
+      title: "Posyandu Lansia",
+      date: "12 Juli 2026",
+      time: "09:00 - Selesai",
+      location: "GKJ Arcawinangun",
+      description:
+        "posyandu lansia akan diadakan hari Minggu tanggal 12 Juli 2026 pukul 09.30 wib (setelah ibadah siang), mohon kehadiran para Adiyuswa.",
+    },
+    {
+      id: "4",
+      title: "PA Adiyuswa",
+      date: "21 Juli 2026",
+      time: "17:00 - Selesai",
+      location: "Gedung GKJ Arcawinangun",
+      description:
+        "PA Adiyuswa akan dilaksanakan pada tanggal Selasa, 21 Juli 2026 pukul 17.00 wib di Gereja dipimpin oleh Ibu Santi Yulianti, S.Th. Mohon kehadiran para Adiyuswa.",
     },
   ];
 
@@ -103,24 +121,6 @@ export default function PengumumanPage() {
               <div className="divide-y divide-gray-100 dark:divide-zinc-800/60">
                 {[
                   {
-                    tanggal: "7 Juni 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Sdr. Sunarto Kriswartomo.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                    ],
-                  },
-                  {
-                    tanggal: "14 Juni 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Bangun Kriyanto, M.Pd.",
-                    ],
-                  },
-                  {
                     tanggal: "21 Juni 2026",
                     pendeta: [
                       "Dr. Rianto, M.M., M.Pd.K.",
@@ -145,6 +145,15 @@ export default function PengumumanPage() {
                       "-",
                       "-",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
+                    ],
+                  },
+                  {
+                    tanggal: "12 Juli 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Sdri. Destalenta I.P.,S.Si. Teol.",
                     ],
                   },
                 ].map((item, index) => (
