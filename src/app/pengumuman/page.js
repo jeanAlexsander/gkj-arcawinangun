@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "posyandu lansia akan diadakan hari Minggu tanggal 12 Juli 2026 pukul 09.30 wib (setelah ibadah siang), mohon kehadiran para Adiyuswa.",
+    "Donor darah akan dilaksanakan pada tanggal 19 Juli 2026 pukul 07.00-11.00 wib di Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun. Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng.",
   ];
 
   const kegiatanMendatang = [
@@ -30,15 +30,6 @@ export default function PengumumanPage() {
     },
     {
       id: "3",
-      title: "Posyandu Lansia",
-      date: "12 Juli 2026",
-      time: "09:00 - Selesai",
-      location: "GKJ Arcawinangun",
-      description:
-        "posyandu lansia akan diadakan hari Minggu tanggal 12 Juli 2026 pukul 09.30 wib (setelah ibadah siang), mohon kehadiran para Adiyuswa.",
-    },
-    {
-      id: "4",
       title: "PA Adiyuswa",
       date: "21 Juli 2026",
       time: "17:00 - Selesai",
@@ -154,6 +145,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Sdri. Destalenta I.P.,S.Si. Teol.",
+                    ],
+                  },
+                  {
+                    tanggal: "19 Juli 2026",
+                    pendeta: [
+                      "Pdt. Yusuf Marwanto, S.Si.",
+                      "Sdr. Sunarto Kriswartomo",
+                      "Dr. Rianto, MM.,M.Pd.K",
+                      "Pdt. Yusuf Marwanto, S.Si.",
                     ],
                   },
                 ].map((item, index) => (
