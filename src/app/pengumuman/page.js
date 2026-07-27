@@ -6,36 +6,18 @@ import { useState, useEffect } from "react";
 
 export default function PengumumanPage() {
   const highlight = [
-    "Donor darah akan dilaksanakan pada tanggal 19 Juli 2026 pukul 07.00-11.00 wib di Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun. Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng.",
+    // "Donor darah akan dilaksanakan pada tanggal 19 Juli 2026 pukul 07.00-11.00 wib di Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun. Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng.",
   ];
 
   const kegiatanMendatang = [
     {
       id: "1",
-      title: "Rapat Koordinasi Semester II",
-      date: "20 Juli 2026",
-      time: "17:00 - Selesai WIB",
-      location: "Gedung GKJ Arcawinangun",
+      title: "Sidang Majelis Pleno",
+      date: "3 Agustus 2026",
+      time: "17.00 WIB",
+      location: "GKJ Arcawinangun.",
       description:
-        "Mohon perhatian untuk Komisi / Tim dapat mempersiapkan laporkan kegiatan dan laporan keuangan Semester 1 periode bulan Januari-Juni 2026 dan rencana program semester 2. ",
-    },
-    {
-      id: "2",
-      title: "Donor Darah",
-      date: "19 Juli 2026",
-      time: "07:00 - 11:00 WIB",
-      location: "Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun.",
-      description:
-        "Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng",
-    },
-    {
-      id: "3",
-      title: "PA Adiyuswa",
-      date: "21 Juli 2026",
-      time: "17:00 - Selesai",
-      location: "Gedung GKJ Arcawinangun",
-      description:
-        "PA Adiyuswa akan dilaksanakan pada tanggal Selasa, 21 Juli 2026 pukul 17.00 wib di Gereja dipimpin oleh Ibu Santi Yulianti, S.Th. Mohon kehadiran para Adiyuswa.",
+        "Bagi jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas. Dalam persidangan ini Pnt. Umiyati bertugas membawakan renungan, sementara konsumsi disiapkan oleh Blok Sung-Kem",
     },
   ];
 
@@ -112,15 +94,6 @@ export default function PengumumanPage() {
               <div className="divide-y divide-gray-100 dark:divide-zinc-800/60">
                 {[
                   {
-                    tanggal: "21 Juni 2026",
-                    pendeta: [
-                      "Dr. Rianto, M.M., M.Pd.K.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Dr. Sutoyo, M.Pd.K.",
-                    ],
-                  },
-                  {
                     tanggal: "28 Juni 2026",
                     pendeta: [
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
@@ -154,6 +127,15 @@ export default function PengumumanPage() {
                       "Sdr. Sunarto Kriswartomo",
                       "Dr. Rianto, MM.,M.Pd.K",
                       "Pdt. Yusuf Marwanto, S.Si.",
+                    ],
+                  },
+                  {
+                    tanggal: "2 Agustus 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Dr. Rianto, MM., M.Pd.K ",
                     ],
                   },
                 ].map((item, index) => (

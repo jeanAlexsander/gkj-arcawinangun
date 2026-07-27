@@ -62,31 +62,12 @@ export default function Home() {
             {[
               {
                 id: "1",
-                title: "Donor Darah",
-                date: "19 Juli 2026",
-                time: "07.00 - 11.00 WIB (Setelah Ibadah Siang)",
-                location:
-                  "Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun",
-                description:
-                  "Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng",
-              },
-              {
-                id: "2",
-                title: "Rapat Koordinasi Semester 2",
-                date: "20 Juli 2026",
-                time: "17.00 - Selesai",
-                location: "Gedung GKJ Arcawinangun",
-                description:
-                  "Mohon perhatian untuk Komisi / Tim dapat mempersiapkan laporkan kegiatan dan laporan keuangan Semester 1 periode bulan Januari-Juni 2026 dan rencana program semester 2. ",
-              },
-              {
-                id: "3",
-                title: "PA Adiyuswa",
-                date: "21 Juli 2026",
+                title: "Sidang Majelis Pleno",
+                date: "3 Agustus 2026",
                 time: "17.00 WIB",
-                location: "Gedung GKJ Arcawinangun",
+                location: "GKJ Arcawinangun.",
                 description:
-                  "PA Adiyuswa akan dilaksanakan pada tanggal Selasa, 21 Juli 2026 pukul 17.00 wib di Gereja dipimpin oleh Ibu Santi Yulianti, S.Th. Mohon kehadiran para Adiyuswa.",
+                  "Bagi jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas. Dalam persidangan ini Pnt. Umiyati bertugas membawakan renungan, sementara konsumsi disiapkan oleh Blok Sung-Kem",
               },
             ].map((item, index) => {
               const isLongText = item.description.length > 120;
