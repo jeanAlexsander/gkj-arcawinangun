@@ -2,24 +2,22 @@
 
 import { Mic, BookOpen, CalendarDays, Gift, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { kegiatan } from "../../data/kegiatan";
+import { formatTanggal } from "../../lib/formatDate";
 
 export default function PengumumanPage() {
-  const highlight = [
-    // "Donor darah akan dilaksanakan pada tanggal 19 Juli 2026 pukul 07.00-11.00 wib di Ruang Tamu dan halaman depan Pastori GKJ Arcawinangun. Bagi 50 pendonor yang berhasil akan mendapat tambahan menu berupa 800ml Minyak Goreng.",
-  ];
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  const kegiatanMendatang = [
-    {
-      id: "1",
-      title: "Sidang Majelis Pleno",
-      date: "3 Agustus 2026",
-      time: "17.00 WIB",
-      location: "GKJ Arcawinangun.",
-      description:
-        "Bagi jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas. Dalam persidangan ini Pnt. Umiyati bertugas membawakan renungan, sementara konsumsi disiapkan oleh Blok Sung-Kem",
-    },
-  ];
+  const highlight = kegiatan.filter((item) => {
+    if (!item.showInHighlight) return false;
+
+    const diff = item.date.getTime() - today.getTime();
+
+    return diff >= 0 && diff <= 7 * 24 * 60 * 60 * 1000;
+  });
+
+  const kegiatanMendatang = kegiatan.filter((item) => item.date >= new Date());
 
   return (
     <main className="bg-white dark:bg-zinc-950 space-y-24 transition-colors duration-300 min-h-screen">
@@ -54,12 +52,19 @@ export default function PengumumanPage() {
             Highlight – Minggu Ini
           </h2>
 
-          <ul className="list-disc list-outside pl-6 text-lg text-gray-700 dark:text-zinc-300 leading-relaxed space-y-2">
+          <ul className="list-disc list-outside pl-6">
             {highlight.length > 0 ? (
-              highlight.map((item, index) => <li key={index}>{item}</li>)
+              highlight.map((item) => (
+                <li key={item.id}>
+                  <strong>{item.title}</strong> akan dilaksanakan pada{" "}
+                  {formatTanggal(item.date)}
+                  {item.time && ` pukul ${item.time}`}
+                  {item.location && ` di ${item.location}`}.
+                </li>
+              ))
             ) : (
-              <li className="list-none text-center text-gray-500 dark:text-zinc-500">
-                Belum ada highlight minggu ini
+              <li className="list-none text-center">
+                Belum ada highlight minggu ini.
               </li>
             )}
           </ul>
@@ -168,7 +173,7 @@ export default function PengumumanPage() {
       {/* KEGIATAN MENDATANG */}
       <section
         id="highlight-minggu-ini"
-        className="max-w-5xl mx-auto px-6 mb-32"
+        className="scroll-mt-32 max-w-5xl mx-auto px-6 mb-32"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -200,7 +205,7 @@ export default function PengumumanPage() {
 
                   {/* Date & Time */}
                   <div className="text-gray-600 dark:text-zinc-400 text-sm space-y-1 mb-3">
-                    <p>Tanggal : {item.date}</p>
+                    <p>Tanggal : {formatTanggal(item.date)}</p>
                     {item.time && <p>Waktu : {item.time}</p>}
                     {item.location && <p>Lokasi : {item.location}</p>}
                   </div>

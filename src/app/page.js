@@ -1,11 +1,29 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import TentangSlider from "@/components/TentangSlider";
 import { Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import { kegiatan } from "../data/kegiatan";
+import { formatTanggal } from "../lib/formatDate";
 
 export default function Home() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const ONE_WEEK = 7 * 24 * 60 * 60 * 1000;
+
+  const highlight = kegiatan
+    .filter((item) => {
+      if (!item.showInHighlight) return false;
+
+      const diff = item.date.getTime() - today.getTime();
+
+      return diff >= 0 && diff <= ONE_WEEK;
+    })
+    .sort((a, b) => a.date.getTime() - b.date.getTime());
+
   return (
     // 1. Tambahkan transisi warna global pada main tag
     <main className="bg-white dark:bg-zinc-950 transition-colors duration-300">
@@ -59,77 +77,88 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            {[
-              {
-                id: "1",
-                title: "Sidang Majelis Pleno",
-                date: "3 Agustus 2026",
-                time: "17.00 WIB",
-                location: "GKJ Arcawinangun.",
-                description:
-                  "Bagi jemaat yang mempunyai kepentingan dapat menyampaikannya secara tertulis kepada Majelis atau melalui Kantor Gereja dengan menyertakan nama dan alamat yang jelas. Dalam persidangan ini Pnt. Umiyati bertugas membawakan renungan, sementara konsumsi disiapkan oleh Blok Sung-Kem",
-              },
-            ].map((item, index) => {
-              const isLongText = item.description.length > 120;
-              const shortDescription = isLongText
-                ? item.description.slice(0, 120) + "..."
-                : item.description;
+            {highlight.length > 0 ? (
+              highlight.map((item, index) => {
+                const description = item.description ?? "";
 
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-gray-50 dark:bg-zinc-900 rounded-xl p-6 border border-gray-200 dark:border-zinc-800 hover:shadow-md hover:border-blue-200 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between h-full"
-                >
-                  <div>
-                    {/* Title */}
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-zinc-100 line-clamp-2 min-h-14">
-                      {item.title}
-                    </h3>
+                const isLongText = description.length > 120;
 
-                    {/* Information Border */}
-                    <div className="mt-3 space-y-1.5 text-xs text-gray-600 dark:text-zinc-400 border-b border-gray-200/60 dark:border-zinc-800 pb-3">
-                      <div className="flex">
-                        <span className="w-14 font-semibold text-gray-500 dark:text-zinc-500 shrink-0">
-                          Tanggal
-                        </span>
-                        <span className="truncate">: {item.date}</span>
+                const shortDescription = isLongText
+                  ? description.slice(0, 120) + "..."
+                  : description;
+
+                return (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-gray-50 dark:bg-zinc-900 rounded-xl p-6 border border-gray-200 dark:border-zinc-800 hover:shadow-md hover:border-blue-200 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between h-full"
+                  >
+                    <div>
+                      {/* Title */}
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-zinc-100 line-clamp-2 min-h-14">
+                        {item.title}
+                      </h3>
+
+                      {/* Information Border */}
+                      <div className="mt-3 space-y-1.5 text-xs text-gray-600 dark:text-zinc-400 border-b border-gray-200/60 dark:border-zinc-800 pb-3">
+                        <div className="flex">
+                          <span className="w-14 font-semibold text-gray-500 dark:text-zinc-500 shrink-0">
+                            Tanggal
+                          </span>
+                          <span className="truncate">
+                            : {formatTanggal(item.date)}
+                          </span>
+                        </div>
+
+                        {item.time && (
+                          <div className="flex">
+                            <span className="w-14 font-semibold text-gray-500 dark:text-zinc-500 shrink-0">
+                              Waktu
+                            </span>
+                            <span className="truncate">: {item.time}</span>
+                          </div>
+                        )}
+
+                        {item.location && (
+                          <div className="flex">
+                            <span className="w-14 font-semibold text-gray-500 dark:text-zinc-500 shrink-0">
+                              Lokasi
+                            </span>
+                            <span className="truncate">: {item.location}</span>
+                          </div>
+                        )}
                       </div>
-                      <div className="flex">
-                        <span className="w-14 font-semibold text-gray-500 dark:text-zinc-500 shrink-0">
-                          Waktu
-                        </span>
-                        <span className="truncate">: {item.time}</span>
-                      </div>
-                      <div className="flex">
-                        <span className="w-14 font-semibold text-gray-500 dark:text-zinc-500 shrink-0">
-                          Lokasi
-                        </span>
-                        <span className="truncate">: {item.location}</span>
-                      </div>
+
+                      {/* Deskripsi */}
+                      {description && (
+                        <p className="text-gray-600 dark:text-zinc-400 text-sm mt-3 leading-relaxed text-left">
+                          {shortDescription}
+                        </p>
+                      )}
                     </div>
 
-                    {/* Deskripsi */}
-                    <p className="text-gray-600 dark:text-zinc-400 text-sm mt-3 leading-relaxed text-left">
-                      {shortDescription}
-                    </p>
-                  </div>
-
-                  {isLongText && (
-                    <div className="mt-4 pt-2">
-                      <Link
-                        href="/pengumuman#highlight-minggu-ini"
-                        className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 flex items-center gap-1 transition-colors"
-                      >
-                        Baca Selengkapnya
-                      </Link>
-                    </div>
-                  )}
-                </motion.div>
-              );
-            })}
+                    {isLongText && (
+                      <div className="mt-4 pt-2">
+                        <Link
+                          href="/pengumuman#highlight-minggu-ini"
+                          className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 flex items-center gap-1 transition-colors"
+                        >
+                          Baca Selengkapnya
+                        </Link>
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })
+            ) : (
+              <div className="md:col-span-3 text-center border border-dashed border-gray-300 dark:border-zinc-700 rounded-xl p-8">
+                <p className="text-gray-500 dark:text-zinc-400">
+                  Belum ada highlight minggu ini.
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="text-center mt-12">
