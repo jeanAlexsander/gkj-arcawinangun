@@ -143,6 +143,15 @@ export default function PengumumanPage() {
                       "Dr. Rianto, MM., M.Pd.K ",
                     ],
                   },
+                  {
+                    tanggal: "16 Agustus 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Sdr. Sunarto Kriswartomo",
+                      "-",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                    ],
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
