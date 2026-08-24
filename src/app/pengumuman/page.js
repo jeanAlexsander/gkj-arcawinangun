@@ -99,15 +99,6 @@ export default function PengumumanPage() {
               <div className="divide-y divide-gray-100 dark:divide-zinc-800/60">
                 {[
                   {
-                    tanggal: "28 Juni 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Dr. Sutoyo, M.Pd.K.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                    ],
-                  },
-                  {
                     tanggal: "5 Juli 2026",
                     pendeta: [
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
@@ -149,6 +140,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Sdr. Sunarto Kriswartomo",
                       "-",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                    ],
+                  },
+                  {
+                    tanggal: "30 Agustus 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Dr. Sutoyo, M.Pd.K.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                     ],
                   },
