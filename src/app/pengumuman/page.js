@@ -152,6 +152,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                     ],
                   },
+                  {
+                    tanggal: "06 September 2026",
+                    pendeta: [
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Sdr Sunarto Kriswartomo",
+                    ],
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
