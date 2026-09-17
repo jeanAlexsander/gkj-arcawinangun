@@ -99,15 +99,6 @@ export default function PengumumanPage() {
               <div className="divide-y divide-gray-100 dark:divide-zinc-800/60">
                 {[
                   {
-                    tanggal: "5 Juli 2026",
-                    pendeta: [
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                      "-",
-                      "-",
-                      "Pdt. Amos Renoardi, S.TH., M.Si.",
-                    ],
-                  },
-                  {
                     tanggal: "12 Juli 2026",
                     pendeta: [
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
@@ -159,6 +150,15 @@ export default function PengumumanPage() {
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Pdt. Amos Renoardi, S.TH., M.Si.",
                       "Sdr Sunarto Kriswartomo",
+                    ],
+                  },
+                  {
+                    tanggal: "20 September 2026",
+                    pendeta: [
+                      "Pdt. Rudiarto Budi P., S.Th.",
+                      "Sdr Sunarto Kriswartomo",
+                      "Pdt. Amos Renoardi, S.TH., M.Si.",
+                      "Pdt. Rudiarto Budi P., S.Th.",
                     ],
                   },
                 ].map((item, index) => (

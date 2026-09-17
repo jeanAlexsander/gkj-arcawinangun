@@ -176,14 +176,14 @@ export default function JadwalIbadahPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { title: "Blok A", day: "Selasa", time: "19.00 WIB" },
-              { title: "Blok B", day: "Kamis", time: "19.00 WIB" },
+              { title: "Blok B", day: "Jumat", time: "17.00 WIB" },
               { title: "Blok C", day: "Rabu", time: "19.00 WIB" },
               { title: "Blok D", day: "Kamis", time: "17.00 WIB" },
               { title: "Blok E", day: "Kamis", time: "17.00 WIB" },
               {
                 title: "Blok Sumbang Kembaran",
                 day: "Jumat",
-                time: "19.00 WIB",
+                time: "17.00 WIB",
               },
               {
                 title: "Blok Pepanthan Karangnanas",
