@@ -161,6 +161,15 @@ export default function PengumumanPage() {
                       "Pdt. Rudiarto Budi P., S.Th.",
                     ],
                   },
+                  {
+                    tanggal: "27 September 2026",
+                    pendeta: [
+                      "Dr. Rianto, M.M., M.Pd.K.",
+                      "Dr. Sutoyo, M.Pd.K.",
+                      "Pdt. Amos Renoardi, S.Th., M.Si.",
+                      "Pdt. Amos Renoardi, S.Th., M.Si. ",
+                    ],
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
